@@ -5,13 +5,20 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.ManyToOne;
+
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
+@Entity
 public class Aula {
-    private int id;
+    @Id
+    private long codigo;
     private String aula;
     private String turno;
+    @ManyToOne
     private Administracao matricula;
 }
