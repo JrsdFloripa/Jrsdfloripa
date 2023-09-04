@@ -5,9 +5,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.ManyToOne;
+import javax.persistence.*;
 
 @AllArgsConstructor
 @NoArgsConstructor
@@ -16,11 +14,12 @@ import javax.persistence.ManyToOne;
 @Entity
 public class Aluno {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long codigo;
     private String nome;
     private double peso;
     private int idade;
     private long cpf;
     @ManyToOne
-    private Administracao matricula;
+    private Matricula matricula;
 }

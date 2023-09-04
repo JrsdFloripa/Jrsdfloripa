@@ -19,6 +19,5 @@ public class Aula {
     private long codigo;
     private String aula;
     private String turno;
-    @ManyToOne
-    private Administracao matricula;
+
 }

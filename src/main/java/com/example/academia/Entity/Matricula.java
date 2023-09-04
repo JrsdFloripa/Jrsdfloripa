@@ -12,11 +12,12 @@ import java.util.Date;
 @Getter
 @Setter
 @Entity
-public class Administracao {
+public class Matricula {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long matricula;
     private Date inicio;
     private boolean mensalidade;
-
+    @ManyToOne
+    private Aula aula;
 }
