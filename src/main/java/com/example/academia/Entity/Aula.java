@@ -9,6 +9,7 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 
+
 @Getter
 @Setter
 @NoArgsConstructor
@@ -19,5 +20,6 @@ public class Aula {
     private long codigo;
     private String aula;
     private String turno;
-
+    @ManyToOne
+    private Matricula matricula;
 }

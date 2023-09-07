@@ -18,6 +18,6 @@ public class Matricula {
     private long matricula;
     private Date inicio;
     private boolean mensalidade;
-    @ManyToOne
-    private Aula aula;
+    @OneToOne
+    private Aluno Codigo;
 }
